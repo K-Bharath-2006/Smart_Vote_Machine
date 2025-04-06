@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# 🗳️ Smart Voting System - Shadow Strikers
 
-## Project info
+A secure and offline-capable voting system developed by Team Shadow Strikers. Designed for use in polling booths with integrated QR code and biometric authentication to ensure fast, secure, and tamper-proof voter verification.
 
-**URL**: https://lovable.dev/projects/e3be235c-8d26-44a8-9070-930c8ea160cc
+---
 
-## How can I edit this code?
+## 🔧 Features
+- ✅ Offline functionality using local database (up to 1,500 voters)
+- 🔍 QR code-based voter identification
+- 🧠 Biometric verification for double authentication
+- 💾 Local data storage (secure and encrypted)
+- 🖥️ User-friendly interface built with FlutterFlow
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🏗️ Tech Stack
+- **Frontend:** FlutterFlow
+- **Backend:** Local database (SQLite / similar)
+- **Verification:** QR Code Scanner, Biometric Module
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e3be235c-8d26-44a8-9070-930c8ea160cc) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 How It Works
+1. Voter scans QR code sent via official channel.
+2. System matches QR with the local database.
+3. Fingerprint/biometric authentication confirms identity.
+4. If verified, voter is allowed to cast the vote.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧪 Future Plans
+- Sync data with central database once online
+- Add facial recognition as an optional verification method
+- Integrate real-time monitoring and analytics
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 👨‍💻 Developed by
+**Team Shadow Strikers**  
+Led by: Bharath K
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📸 Screenshots
+> *(Add screenshots of your UI or diagrams of your workflow if available)*
+> ![WhatsApp Image 2025-04-06 at 12 13 44_985602ec](https://github.com/user-attachments/assets/6e82b19f-d0d9-49ff-a80a-064633429e3a)
+> ![WhatsApp Image 2025-04-06 at 12 13 49_0f750a3b](https://github.com/user-attachments/assets/37d6a045-12ac-4eab-93ed-a73ce4b5f8a0)
+> ![WhatsApp Image 2025-04-06 at 12 13 49_510ae6d4](https://github.com/user-attachments/assets/49edb6b2-7e17-425b-b115-4b861f85fad2)
+> ![WhatsApp Image 2025-04-06 at 12 13 50_2077daf1](https://github.com/user-attachments/assets/06c5d797-9893-4b4b-bfc9-b65ae9d92cf1)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e3be235c-8d26-44a8-9070-930c8ea160cc) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
