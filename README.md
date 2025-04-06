@@ -14,7 +14,7 @@ A secure and offline-capable voting system developed by Team Shadow Strikers. De
 ---
 
 ## 🏗️ Tech Stack
-- **Frontend:** FlutterFlow
+- **Frontend:** Flutter/IDX
 - **Backend:** Local database (SQLite / similar)
 - **Verification:** QR Code Scanner, Biometric Module
 
