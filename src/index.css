@@ -102,51 +102,13 @@
 }
 
 @layer components {
-  .eci-container {
-    @apply max-w-5xl mx-auto px-4 py-8 min-h-screen flex flex-col;
-  }
-  
-  .eci-card {
-    @apply bg-white rounded-xl border-2 border-eci-navy shadow-lg p-8 flex flex-col items-center justify-center;
-  }
-
-  .eci-heading {
-    @apply text-3xl font-bold text-eci-navy mb-4 text-center;
-  }
-
-  .eci-subheading {
-    @apply text-xl text-gray-600 mb-6 text-center;
-  }
-
-  .eci-button {
-    @apply bg-eci-blue hover:bg-eci-navy text-white font-bold py-3 px-6 rounded-md 
-           transition-all duration-300 flex items-center justify-center gap-2 
-           shadow-md hover:shadow-lg;
-  }
-
-  .eci-progress {
-    @apply h-2 w-full bg-gray-200 rounded-full overflow-hidden my-4;
-  }
-
   .offline-indicator {
     @apply flex items-center gap-2 text-sm border border-gray-200 rounded-full 
            px-3 py-1 bg-gray-100 text-gray-600 shadow-sm;
   }
 
-  .status-pulse {
-    @apply h-3 w-3 rounded-full animate-pulse-slow;
-  }
-
-  .offline-pulse {
-    @apply bg-red-500;
-  }
-
-  .secure-pulse {
-    @apply bg-green-500;
-  }
-  
   .qr-scanner-window {
-    @apply relative mx-auto border-4 border-gray-300 rounded-lg h-64 w-64 overflow-hidden bg-gray-100;
+    @apply relative mx-auto border-2 border-gray-200 rounded-lg h-64 w-64 overflow-hidden bg-gray-50;
   }
   
   .qr-scanner-line {
@@ -154,6 +116,6 @@
   }
   
   .fingerprint-scan-area {
-    @apply border-4 border-dashed border-gray-400 rounded-lg h-40 w-40 flex items-center justify-center bg-gray-100;
+    @apply border-2 border-dashed border-gray-300 rounded-lg h-40 w-40 flex items-center justify-center bg-gray-50;
   }
 }

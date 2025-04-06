@@ -25,12 +25,12 @@ const BallotScreen: React.FC = () => {
   };
 
   return (
-    <div className="eci-card max-w-2xl mx-auto mt-10">
-      <h2 className="eci-heading">Step 3 of 4: Cast Your Vote</h2>
-      <p className="eci-subheading">Select your preferred candidate</p>
+    <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
+      <h2 className="text-xl font-bold text-eci-navy text-center mb-2">Step 3 of 4: Cast Your Vote</h2>
+      <p className="text-gray-500 text-center mb-6">Select your preferred candidate</p>
       
-      <div className="w-full mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded">
-        <p className="text-center text-yellow-800">
+      <div className="w-full mb-6 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+        <p className="text-center text-yellow-700 text-sm">
           The ballot unit is now active. Your vote is confidential and secure.
         </p>
       </div>
@@ -41,7 +41,7 @@ const BallotScreen: React.FC = () => {
             key={candidate.id}
             onClick={() => handleSelectCandidate(candidate.id)}
             className={`
-              border-2 rounded-lg p-4 mb-3 cursor-pointer flex items-center
+              border rounded-md p-4 mb-3 cursor-pointer flex items-center
               ${selectedCandidate === candidate.id 
                 ? 'border-eci-blue bg-blue-50' 
                 : 'border-gray-200 hover:border-gray-300'
@@ -55,7 +55,7 @@ const BallotScreen: React.FC = () => {
             
             <div className="flex-grow">
               <p className="font-semibold">{candidate.name}</p>
-              <p className="text-sm text-gray-600">{candidate.party}</p>
+              <p className="text-sm text-gray-500">{candidate.party}</p>
             </div>
             
             {selectedCandidate === candidate.id && (
@@ -70,7 +70,7 @@ const BallotScreen: React.FC = () => {
       
       <button
         onClick={handleContinue}
-        className={`eci-button w-full ${!selectedCandidate ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`bg-eci-blue text-white py-3 px-8 rounded-md shadow-md w-full ${!selectedCandidate ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={!selectedCandidate}
       >
         Continue to Confirm Vote

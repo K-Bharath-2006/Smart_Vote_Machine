@@ -34,11 +34,11 @@ const BiometricScreen: React.FC = () => {
   };
 
   return (
-    <div className="eci-card max-w-xl mx-auto mt-10">
-      <h2 className="eci-heading">Step 2 of 4: Biometric Verification</h2>
-      <p className="eci-subheading">Please provide fingerprint for verification</p>
+    <div className="bg-white rounded-lg shadow-md p-8 max-w-xl mx-auto">
+      <h2 className="text-xl font-bold text-eci-navy text-center mb-2">Step 2 of 4: Biometric Verification</h2>
+      <p className="text-gray-500 text-center mb-6">Please provide fingerprint for verification</p>
       
-      <div className="eci-progress">
+      <div className="h-2 bg-gray-100 rounded-full mb-6">
         <div 
           className="bg-eci-blue h-full transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
@@ -48,18 +48,18 @@ const BiometricScreen: React.FC = () => {
       <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 mb-6">
         <div className="flex justify-between items-center text-left">
           <div>
-            <p className="text-gray-500 text-sm">Voter Name</p>
+            <p className="text-gray-400 text-sm">Voter Name</p>
             <p className="font-semibold">{voterName}</p>
           </div>
           <div>
-            <p className="text-gray-500 text-sm">Voter ID</p>
+            <p className="text-gray-400 text-sm">Voter ID</p>
             <p className="font-semibold">{voterID}</p>
           </div>
         </div>
       </div>
       
       <div className="flex flex-col items-center mb-6">
-        <div className="fingerprint-scan-area mb-4">
+        <div className="fingerprint-scan-area mb-4 border-dashed border-2 border-gray-300">
           {scanning ? (
             <div className="animate-pulse">
               <Fingerprint className="h-20 w-20 text-eci-blue" />
@@ -72,7 +72,7 @@ const BiometricScreen: React.FC = () => {
         {!scanning ? (
           <button
             onClick={handleScanStart}
-            className="eci-button"
+            className="bg-eci-blue text-white py-3 px-8 rounded-md shadow-md"
           >
             Scan Fingerprint
           </button>
@@ -92,7 +92,7 @@ const BiometricScreen: React.FC = () => {
         </ol>
       </div>
       
-      <div className="mt-6 p-4 border border-green-300 bg-green-50 rounded text-sm text-green-800">
+      <div className="mt-6 p-4 border border-green-200 bg-green-50 rounded text-sm text-green-700">
         <p className="flex items-center gap-2">
           <span className="font-medium">Security:</span> 
           Your biometric data is encrypted and stored securely in the local database only

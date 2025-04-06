@@ -66,7 +66,7 @@ export default {
 				// ECI colors
 				eci: {
 					navy: '#0a2463',
-					blue: '#2346b0',
+					blue: '#2346b0', 
 					orange: '#FF9933',
 					green: '#138808'
 				}

@@ -28,10 +28,10 @@ const VotingMachine: React.FC = () => {
       </main>
       
       {currentStep !== "login" && (
-        <footer className="bg-eci-navy text-white py-2 mt-auto">
+        <footer className="bg-white text-eci-navy py-3 border-t border-gray-200 mt-auto">
           <div className="max-w-5xl mx-auto px-4 text-center text-xs">
-            <p>Secure Electronic Voting System • Election Commission of India</p>
-            <p className="text-xs text-gray-400">
+            <p className="font-medium">Secure Electronic Voting System • Election Commission of India</p>
+            <p className="text-gray-500">
               This system operates completely offline for maximum security
             </p>
           </div>

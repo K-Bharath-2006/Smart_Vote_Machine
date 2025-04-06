@@ -28,35 +28,35 @@ const SuccessScreen: React.FC = () => {
   }, [countdown, resetProcess]);
 
   return (
-    <div className="eci-card max-w-lg mx-auto mt-10">
+    <div className="bg-white rounded-lg shadow-md p-8 max-w-xl mx-auto">
       <div className="flex flex-col items-center">
         <div className="h-20 w-20 bg-green-100 rounded-full flex items-center 
                       justify-center mb-6">
           <CheckCircle className="h-12 w-12 text-green-600" />
         </div>
         
-        <h2 className="eci-heading text-green-700">Vote Successfully Cast!</h2>
-        <p className="eci-subheading">Thank you for participating in the democratic process</p>
+        <h2 className="text-xl font-bold text-green-600 text-center mb-2">Vote Successfully Cast!</h2>
+        <p className="text-gray-500 text-center mb-6">Thank you for participating in the democratic process</p>
         
-        <div className="w-full p-6 bg-gray-50 border border-gray-200 rounded-lg text-center mb-8">
-          <p className="text-lg mb-2">Your vote has been securely recorded</p>
-          <p className="text-gray-600">
+        <div className="w-full p-6 bg-gray-50 border border-gray-200 rounded-md text-center mb-8">
+          <p className="text-md mb-2">Your vote has been securely recorded</p>
+          <p className="text-gray-500">
             The system will automatically reset in <span className="font-bold">{countdown}</span> seconds
           </p>
         </div>
         
         <button
           onClick={resetProcess}
-          className="eci-button"
+          className="bg-eci-blue text-white py-3 px-8 rounded-md shadow-md"
         >
           Return to Login Screen
         </button>
         
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg w-full">
-          <h3 className="font-semibold text-center mb-2 text-blue-800">
+        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-md w-full">
+          <h3 className="font-semibold text-center mb-2 text-blue-700">
             About the Secure Offline Voting System
           </h3>
-          <ul className="text-sm space-y-2 text-blue-700">
+          <ul className="text-sm space-y-2 text-blue-600">
             <li>• Fully offline operation ensures protection from cyber attacks</li>
             <li>• All vote data is encrypted and stored in a secure local database</li>
             <li>• Designed for use in remote rural areas without internet connectivity</li>
