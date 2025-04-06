@@ -36,19 +36,19 @@ const QrScanScreen: React.FC = () => {
   };
 
   return (
-    <div className="eci-card max-w-xl mx-auto mt-10">
-      <h2 className="eci-heading">Step 1 of 4: Voter ID Verification</h2>
-      <p className="eci-subheading">Please scan the QR code on your Voter ID card</p>
+    <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl mx-auto">
+      <h2 className="text-2xl font-bold text-eci-navy text-center mb-2">Step 1 of 4: Voter ID Verification</h2>
+      <p className="text-gray-600 text-center mb-6">Please scan the QR code on your Voter ID card</p>
       
-      <div className="eci-progress">
+      <div className="h-2 bg-gray-200 rounded-full mb-8">
         <div 
-          className="bg-eci-blue h-full transition-all duration-300 ease-out"
+          className="bg-blue-500 h-full rounded-full transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
       
-      <div className="qr-scanner-window mb-6">
-        {scanning && <div className="qr-scanner-line"></div>}
+      <div className="border-2 border-dashed border-gray-300 rounded-lg h-64 flex items-center justify-center mb-6 bg-gray-50">
+        {scanning && <div className="h-1 bg-blue-500 w-full absolute animate-pulse"></div>}
         {!scanning && (
           <div className="flex items-center justify-center h-full">
             <QrCode className="h-16 w-16 text-gray-400" />
@@ -59,12 +59,12 @@ const QrScanScreen: React.FC = () => {
       {!scanning ? (
         <button
           onClick={handleScanStart}
-          className="eci-button"
+          className="bg-blue-500 text-white py-3 px-8 rounded-full shadow-md w-full flex items-center justify-center"
         >
           Start Scanning
         </button>
       ) : (
-        <div className="text-center text-lg text-eci-blue animate-pulse font-medium">
+        <div className="text-center text-lg text-blue-500 animate-pulse font-medium">
           Scanning QR Code...
         </div>
       )}
@@ -76,13 +76,6 @@ const QrScanScreen: React.FC = () => {
           <li>Keep steady until scanning completes</li>
           <li>System will automatically proceed after verification</li>
         </ol>
-      </div>
-      
-      <div className="mt-6 p-4 border border-yellow-300 bg-yellow-50 rounded text-sm text-yellow-800">
-        <p className="flex items-center gap-2">
-          <span className="font-medium">Note:</span> 
-          Future integration with Aadhaar + Voter ID will enhance verification process
-        </p>
       </div>
     </div>
   );

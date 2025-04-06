@@ -13,26 +13,30 @@ const VotingMachine: React.FC = () => {
   const { currentStep } = useVoting();
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <Header />
+    <div className="flex flex-col h-screen bg-[#e8f1f8]">
+      {currentStep !== "login" && <Header />}
       
-      <main className="eci-container">
-        {currentStep === "login" && <LoginScreen />}
-        {currentStep === "qrScan" && <QrScanScreen />}
-        {currentStep === "biometric" && <BiometricScreen />}
-        {currentStep === "ballot" && <BallotScreen />}
-        {currentStep === "confirmation" && <ConfirmationScreen />}
-        {currentStep === "success" && <SuccessScreen />}
+      <main className="flex-grow flex items-center justify-center p-6">
+        <div className="w-full max-w-4xl">
+          {currentStep === "login" && <LoginScreen />}
+          {currentStep === "qrScan" && <QrScanScreen />}
+          {currentStep === "biometric" && <BiometricScreen />}
+          {currentStep === "ballot" && <BallotScreen />}
+          {currentStep === "confirmation" && <ConfirmationScreen />}
+          {currentStep === "success" && <SuccessScreen />}
+        </div>
       </main>
       
-      <footer className="bg-eci-navy text-white py-3 mt-auto">
-        <div className="max-w-5xl mx-auto px-4 text-center text-sm">
-          <p>Secure Electronic Voting System • Election Commission of India</p>
-          <p className="text-xs text-gray-400 mt-1">
-            This system operates completely offline for maximum security
-          </p>
-        </div>
-      </footer>
+      {currentStep !== "login" && (
+        <footer className="bg-eci-navy text-white py-2 mt-auto">
+          <div className="max-w-5xl mx-auto px-4 text-center text-xs">
+            <p>Secure Electronic Voting System • Election Commission of India</p>
+            <p className="text-xs text-gray-400">
+              This system operates completely offline for maximum security
+            </p>
+          </div>
+        </footer>
+      )}
     </div>
   );
 };
