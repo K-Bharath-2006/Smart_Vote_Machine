@@ -1,7 +1,7 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-type VotingStep = 'login' | 'qrScan' | 'biometric' | 'ballot' | 'confirmation' | 'success';
+type VotingStep = 'login' | 'qrScan' | 'biometric' | 'ballot' | 'success';
 
 interface VotingContextType {
   currentStep: VotingStep;

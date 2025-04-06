@@ -6,7 +6,6 @@ import LoginScreen from "../components/LoginScreen";
 import QrScanScreen from "../components/QrScanScreen";
 import BiometricScreen from "../components/BiometricScreen";
 import BallotScreen from "../components/BallotScreen";
-import ConfirmationScreen from "../components/ConfirmationScreen";
 import SuccessScreen from "../components/SuccessScreen";
 
 const VotingMachine: React.FC = () => {
@@ -22,7 +21,6 @@ const VotingMachine: React.FC = () => {
           {currentStep === "qrScan" && <QrScanScreen />}
           {currentStep === "biometric" && <BiometricScreen />}
           {currentStep === "ballot" && <BallotScreen />}
-          {currentStep === "confirmation" && <ConfirmationScreen />}
           {currentStep === "success" && <SuccessScreen />}
         </div>
       </main>
