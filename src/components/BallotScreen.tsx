@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 import { useVoting } from "../context/VotingContext";
-import { Check } from "lucide-react";
+import { Check, Edit } from "lucide-react";
+import { Button } from "./ui/button";
 
 // Sample candidate data
 const candidates = [
@@ -48,13 +49,11 @@ const BallotScreen: React.FC = () => {
         {candidates.map((candidate) => (
           <div 
             key={candidate.id}
-            onClick={() => handleSelectCandidate(candidate.id)}
             className={`
-              border rounded-md p-4 mb-3 cursor-pointer flex items-center
+              border rounded-md p-4 mb-3 flex items-center
               ${selectedCandidate === candidate.id 
                 ? 'border-eci-blue bg-blue-50' 
-                : 'border-gray-200 hover:border-gray-300'
-              }
+                : 'border-gray-200'}
             `}
           >
             <div className="flex-shrink-0 h-12 w-12 bg-white rounded-full border 
@@ -66,12 +65,22 @@ const BallotScreen: React.FC = () => {
               <p className="font-semibold">{candidate.name}</p>
               <p className="text-sm text-gray-500">{candidate.party}</p>
             </div>
-            
-            {selectedCandidate === candidate.id && (
+
+            {selectedCandidate === candidate.id ? (
               <div className="flex-shrink-0 h-8 w-8 bg-eci-blue rounded-full 
                             flex items-center justify-center text-white">
                 <Check className="h-5 w-5" />
               </div>
+            ) : (
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="flex-shrink-0 text-eci-blue hover:text-blue-700"
+                onClick={() => handleSelectCandidate(candidate.id)}
+              >
+                <Edit className="h-4 w-4 mr-1" />
+                Select
+              </Button>
             )}
           </div>
         ))}
