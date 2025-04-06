@@ -9,7 +9,7 @@ A secure and offline-capable voting system developed by Team Shadow Strikers. De
 - 🔍 QR code-based voter identification
 - 🧠 Biometric verification for double authentication
 - 💾 Local data storage (secure and encrypted)
-- 🖥️ User-friendly interface built with FlutterFlow
+- 🖥️ User-friendly interface built with Flutter
 
 ---
 
@@ -37,7 +37,10 @@ A secure and offline-capable voting system developed by Team Shadow Strikers. De
 
 ## 👨‍💻 Developed by
 **Team Shadow Strikers**  
-Led by: Bharath K
+Led by : Bharath K
+Team Members :
+Dinesh Pandi T
+Jagadeesh R
 ---
 
 ## 📸 Screenshots
